@@ -23,7 +23,6 @@ public class ApplicationContextConfig {
 
 	// The Environment class serves as the property holder
 	// and stores all the properties loaded by the @PropertySource
-
 	@Autowired
 	private Environment env;
 
@@ -48,7 +47,6 @@ public class ApplicationContextConfig {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 
 		// See: datasouce-cfg.properties
-		// Xem: datasouce-cfg.properties
 		dataSource.setDriverClassName(env.getProperty("ds.database-driver"));
 		dataSource.setUrl(env.getProperty("ds.url"));
 		dataSource.setUsername(env.getProperty("ds.username"));

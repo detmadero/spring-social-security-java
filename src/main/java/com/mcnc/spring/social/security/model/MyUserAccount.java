@@ -1,6 +1,13 @@
 package com.mcnc.spring.social.security.model;
 
-public class MyUserAccount {
+import java.io.Serializable;
+
+public class MyUserAccount implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	public static final String ROLE_USER = "ROLE_USER";
 

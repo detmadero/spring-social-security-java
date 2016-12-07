@@ -182,6 +182,13 @@
 			<artifactId>commons-validator</artifactId>
 			<version>1.5.0</version>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.springframework.session/spring-session-jdbc -->
+		<dependency>
+		    <groupId>org.springframework.session</groupId>
+		    <artifactId>spring-session-jdbc</artifactId>
+		    <version>1.2.2.RELEASE</version>
+		</dependency>
 	
 	</dependencies>
 	
