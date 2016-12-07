@@ -25,7 +25,7 @@ public class JdbcHttpSessionConfig {
 		final DefaultCookieSerializer serializer = new DefaultCookieSerializer();
         serializer.setCookieName(env.getProperty("cookieName"));
         serializer.setCookiePath(env.getProperty("cookiePath"));
-        serializer.setDomainNamePattern(env.getProperty("domainNamePattern"));
+        serializer.setDomainName(env.getProperty("domainName"));
         return serializer;
 	}
 	
