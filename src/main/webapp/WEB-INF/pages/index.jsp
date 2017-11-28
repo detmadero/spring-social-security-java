@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Home</title>
+<title>Home Java</title>
 </head>
 <body>
     <jsp:include page="_menu.jsp"/>

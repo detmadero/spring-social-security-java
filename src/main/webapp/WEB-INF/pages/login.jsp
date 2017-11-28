@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Login Page</title>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="<c:url value='/resources/js/facebook-controller.js'/>"></script>
 </head>
 <body>
 	<jsp:include page="_menu.jsp" />
@@ -20,6 +22,9 @@
 			${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}
 		</div>
 	</c:if>
+	<c:if test="${param.auth == 'false'}">
+		
+	</c:if>
 	<form action="${pageContext.request.contextPath}/j_spring_security_check" method='POST'>
 		<table>
 			<tr>
@@ -31,11 +36,10 @@
 				<td><input type='password' name='password' /></td>
 			</tr>
 			<tr>
-				<td><input name="submit" type="submit" value="submit" /></td>
+				<td><input name="submit" type="submit" value="Login" /></td>
 				<td style="text-align: right;"><a href="${pageContext.request.contextPath}/signup">Create new account?</a></td>
 			</tr>
 		</table>
 	</form>
-	
 </body>
 </html>
