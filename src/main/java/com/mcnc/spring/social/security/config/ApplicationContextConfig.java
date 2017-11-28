@@ -62,7 +62,6 @@ public class ApplicationContextConfig {
 	@Bean(name = "transactionManager")
 	public DataSourceTransactionManager getTransactionManager(DataSource dataSource) {
 		DataSourceTransactionManager transactionManager = new DataSourceTransactionManager(dataSource);
-
 		return transactionManager;
 	}
 	
