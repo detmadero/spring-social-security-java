@@ -19,10 +19,7 @@ import org.springframework.social.connect.UsersConnectionRepository;
 import org.springframework.social.connect.jdbc.JdbcUsersConnectionRepository;
 import org.springframework.social.connect.web.ConnectController;
 import org.springframework.social.facebook.connect.FacebookConnectionFactory;
-import org.springframework.social.google.connect.GoogleConnectionFactory;
-import org.springframework.social.linkedin.connect.LinkedInConnectionFactory;
 import org.springframework.social.security.AuthenticationNameUserIdSource;
-import org.springframework.social.twitter.connect.TwitterConnectionFactory;
 
 import com.mcnc.spring.social.security.dao.MyUserAccountDAO;
 import com.mcnc.spring.social.security.signup.MyConnectionSignUp;
@@ -45,25 +42,10 @@ public class SocialConfig implements SocialConfigurer {
 	@Override
 	public void addConnectionFactories(ConnectionFactoryConfigurer cfConfig, Environment env) {
 
-		// Twitter
-		TwitterConnectionFactory tfactory = new TwitterConnectionFactory(env.getProperty("twitter.consumer.key"), env.getProperty("twitter.consumer.secret"));
-		// tfactory.setScope(env.getProperty("twitter.scope"));
-		cfConfig.addConnectionFactory(tfactory);
-
 		// Facebook
 		FacebookConnectionFactory ffactory = new FacebookConnectionFactory(env.getProperty("facebook.app.id"), env.getProperty("facebook.app.secret"));
 		ffactory.setScope(env.getProperty("facebook.scope"));
 		cfConfig.addConnectionFactory(ffactory);
-
-		// Linkedin
-		LinkedInConnectionFactory lfactory = new LinkedInConnectionFactory(env.getProperty("linkedin.consumer.key"), env.getProperty("linkedin.consumer.secret"));
-		lfactory.setScope(env.getProperty("linkedin.scope"));
-		cfConfig.addConnectionFactory(lfactory);
-
-		// Google
-		GoogleConnectionFactory gfactory = new GoogleConnectionFactory(env.getProperty("google.client.id"), env.getProperty("google.client.secret"));
-		gfactory.setScope(env.getProperty("google.scope"));
-		cfConfig.addConnectionFactory(gfactory);
 	}
 
 	// The UserIdSource determines the userID of the user.
